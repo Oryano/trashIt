@@ -1,0 +1,18 @@
+
+
+{
+	
+	"countries": {
+		"USA": {
+			"plastic": "blue_bin"
+		}
+	},
+
+	"bins": {
+		"blue_bin": {
+
+
+
+		}
+	}
+}

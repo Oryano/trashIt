@@ -1,0 +1,86 @@
+{
+	"countries" : {
+		"USA": {
+			"Plastic" : "blue_bin",
+			"glass" : "blue_bin",
+			"metal" : "blue_bin",
+			"hangers" : "blue_bin",
+			"tetrapack" : "blue_bin", 
+			"metal": "blue_bin", 
+			"bottle" : "blue_bin", 
+			"bottles" : "blue_bin", 
+			"can" : "blue_bin", 
+			"soda can" : "blue_bin",
+			"paper" : "green_bin", 
+			"carton" : "green_bin",
+			"news_paper" : "green_bin",
+			"egg_carton" : "green_bin",
+			"paper_bag" : "green_bin",
+			"paper_envelope" : "green_bin",
+			"shreded_paper" : "green_bin",
+			"pizza_carton" : "green_bin",
+			"banana" : "general_bin",
+			"plastic_bag" : "general_bin",
+			"food" : "general_bin",
+			"avocado_pilles" : "general_bin",
+			"wet_paper" : "general_bin",
+			"cork" : "general_bin"
+		},
+		"Italy": {
+			"Plastic" : "cassonetto_marone",
+			"glass" : "cassonetto_marone",
+			"metal" : "cassonetto_marone",
+			"hangers" : "cassonetto_marone",
+			"tetrapack" : "cassonetto_marone", 
+			"metal": "cassonetto_marone", 
+			"bottle" : "cassonetto_marone", 
+			"bottles" : "cassonetto_marone", 
+			"can" : "cassonetto_marone", 
+			"soda can" : "cassonetto_marone",
+			"paper" : "cassonetto_marone", 
+			"carton" : "cassonetto_giallo",
+			"news_paper" : "cassonetto_giallo",
+			"egg_carton" : "cassonetto_giallo",
+			"paper_bag" : "cassonetto_giallo",
+			"paper_envelope" : "cassonetto_giallo",
+			"shreded_paper" : "cassonetto_giallo",
+			"pizza_carton" : "cassonetto_giallo",
+			"banana" : "general_bin",
+			"plastic_bag" : "general_bin",
+			"food" : "general_bin",
+			"avocado_pilles" : "general_bin",
+			"wet_paper" : "general_bin",
+			"cork" : "general_bin"
+		}
+	},
+	"bins": {
+		"blue_bin" : {
+			"color" : "blue",
+			"opening_shape" : "linear",
+			"picture" : "URLPicBlue",
+			"how_its_recycled" : ["URLVidPlastic", "URLVidMetal" , "URLVidGlass"],
+			"interesting_facts" : ["did you know that blah blah blah blah?", "did you know that blah blah?"]
+		},
+		"green_bin" : {
+			"color" : "green",
+			"opening_shape" : "round",
+			"picture" : "URLPicGreen",
+			"how_its_recycled" : ["URLVidPaper"],
+			"interesting_facts" : ["did you know that blah blah blah blah?", "did you know that blah blah?"]
+		},
+		"cassonetto_marone" : {
+			"color" : "brown",
+			"opening_shape" : "linear",
+			"picture" : "URLPicMarone",
+			"how_its_recycled" : ["URLVidPlastic", "URLVidMetal" , "URLVidGlass"],
+			"interesting_facts" : ["did you know that blah blah blah blah?", "did you know that blah blah?"]
+		},
+		"cassonetto_giallo" : {
+			"color" : "brown",
+			"opening_shape" : "round",
+			"picture" : "URLPicGiallo",
+			"how_its_recycled" : ["URLVidPlastic", "URLVidMetal" , "URLVidGlass"],
+			"interesting_facts" : ["did you know that blah blah blah blah?", "did you know that blah blah?"]
+		}
+	}				
+}

@@ -1,71 +1,115 @@
 {
-	"country" : {
+	"countries" : {
 		"USA": {
-			"New-York" : {
-				"blue bin" : {
-					"contanin":["plastic", "glass", "hangers", "tetrapack", "metal", "bottle", "bottles", "can", "soda can"],
-					"color": ["blue", "transparant bag"],
-					"opening shape": ["circular", "circular no linear"],
-					"dont put there" : ["plastic bags", "cork"],
-					"pictures of bin" : "urlToaPicBlue",
-					"what happens to it?" : {
-						"plastic" : "UrlToVideoPlastic",
-						"metal" : "UrlToVideoMetal",
-						"glass" : "UrlToVideoGlass"
-					},
-					"interesting facts" : {
-						"fact 1" : "did you know that blah blah blah?",
-						"fact 2" : "did you know that blah blah blah blah?"
-					}
-				},
-				"green bin" : {
-					"contanin":["paper", "carton"],
-					"color": ["green", "transparant bag"],
-					"opening shape": ["linear"],
-					"dont put there" : ["plastic bags", "cork", "food"],
-					"pictures of bin" : "urlToaPicGreen",
-					"what happens to it?" : {
-						"paper" : "UrlToVideoPlastic",
-						"carton" : "UrlToVideoMetal",
-					},
-					"interesting facts" : {
-						"fact 1" : "did you know that blah blah blah?",
-						"fact 2" : "did you know that blah blah blah blah?"
-					}
-				},
-				"general bin" : {
-				"contanin" : ["banana", "used tissue", "wet paper", "greesy paper", "plastic bags"],
-					"color": ["green", "transparant bag"],
-					"opening shape": ["linear"],
-					"dont put there" : ["plastic bags", "cork", "food"],
-					"pictures of bin" : "urlToaPicGreen",
-					"what happens to it?" : {
-						"trash" : "videoGoingToSeaOrBuried",
-					},
-					"interesting facts" : {
-						"fact 1" : "did you know that plastic bags go here although they are made of plastic?",
-						"fact 2" : "did you know oil should be thrown out in a seald bag in the general trash bin?"
-					},
-				}
-			},
-			"Boston" : {}
+			"Plastic" : ["blue_bin", "URLpic"],
+			"glass" : "blue_bin",
+			"metal" : "blue_bin",
+			"hangers" : "blue_bin",
+			"tetrapack" : "blue_bin", 
+			"metal": "blue_bin", 
+			"bottle" : "blue_bin", 
+			"bottles" : "blue_bin", 
+			"can" : "blue_bin", 
+			"soda can" : "blue_bin",
+			"paper" : "green_bin", 
+			"carton" : "green_bin",
+			"news_paper" : "green_bin",
+			"egg_carton" : "green_bin",
+			"paper_bag" : "green_bin",
+			"paper_envelope" : "green_bin",
+			"shreded_paper" : "green_bin",
+			"pizza_carton" : "green_bin",
+			"banana" : "general_bin",
+			"plastic_bag" : "general_bin",
+			"food" : "general_bin",
+			"avocado_pilles" : "general_bin",
+			"wet_paper" : "general_bin",
+			"cork" : "general_bin",
+			"computer_peripherals" : "special",
+			"computers": "special",
+			"television_peripherals": "special",
+			"television": "special",
+			"TV": "special",
+			"tablets": "special",
+			"e-readers": "special",
+			"music_players" : "special",
+			"Cell_phones" : "special",
+			"iPhone": "special",
+			"iPad": "special",
+			"lap_tops": "special",
+			"hard_drive": "special",
+			"bulb" : "blue_bin",
+			"fluorescent_bulb" : "special"
 		},
-		"Italy": {
-			"Milan": {},
-			"Torin": {}
+
+	"bins": {
+		"blue_bin" : {
+			"general_yes": ["Metal", "Glass", "Plastic", "bottles/jars" "rigid plastic", "cartons"],
+			"general_no" : ["no batteries", "no plastic bags", "no squeeze tubes", "no plastic foams"], 
+			"color" : "blue",
+			"color_bag": "transparent",
+			"opening_shape" : "linear",
+			"picture" : "URLPicBlue",
+			"where_does_it_go" : ["URLVidPlastic", "URLVidMetal" , "URLVidGlass"],
+			"interesting_facts" : ["did you know that small appliances such as toaster oven, blow dryer, microwave CAN be recycled (anything that is mostly metal or rigid plastic). Just remove the batteries!", "did you know that liquid containing cartons are made with thin layers of polyethylene plastic, requiring special processing which can’t be handled by paper recyclers?"]
 		},
-		"Israel": {
-			"Jerusalem": {}
+
+		"green_bin" : {
+			"general_yes": ["Mixed Paper", "cardboard"],
+			"general_no" : ["no hardcover books", "no waxed paper", "no soiled paper", "no soft paper", "no food-contaminated paper", "no plastic envelopes", "no bubble wrap", "no photographs", "no tissues/napkins/paper towels", "no coated paper"], 
+			"color" : "green",
+			"color_bag": "transparent",
+			"opening_shape" : "linear",
+			"picture" : "URLPicGreen",
+			"where_does_it_go" : ["URLVidPaper"],
+			"interesting_facts" : ["did you know You CAN recycle staples in the paper bin?", "did you know that during the recycling process, paper is dissolved in water, that's why paper permeated with plastic or wax can’t be recycled.", "Did you know that Soiled paper adds impurities to the recycled product?"],
 		},
-		"Brazil" : {
-			"Sao-Paolo":{},
-			"Rio de Jenero" : {}
+
+		"mixed_recycle": {
+			"general_yes" : "",
+			"general_no" : ["no waxed paper", "no soiled paper", "no soft paper"],
+			"color" : "silver",
+			"color_bag": "transparent",
+			"opening_shape" : "rectangle",
+			"picture" : "URL",
+			"where_does_it_go" : ["URLVidPaper"],
+			"interesting_facts" : ["did you know that blah blah blah blah?", "did you know that blah blah?"]
+		},
+
+		"general_trash" : {
+			"general_yes" : ["food","unrecyclables"],
+			"general_no" : "any recycables",
+			"color" : "brown",
+			"opening_shape" : "rectangle",
+			"picture" : "URL",
+			"where_does_it_go" : ["URLVidPaper"],
+			"interesting_facts" : ["did you know that blah blah blah blah?", "did you know that blah blah?"]
+		},
+		"special":{
+			"general_yes":"electronics",
+			"general_no" : "",
+			"where_to_throw": "buildings have a free service of pick up and recycle unwanted electronics. Ask your super",
+			"where_does_it_go" : ""
+						
 		}
 	}
+}
 }
 
 
 
-		
-			 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
