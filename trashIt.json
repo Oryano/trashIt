@@ -1,7 +1,7 @@
 {
 	"countries" : {
 		"USA": {
-			"Plastic" : ["blue_bin", "/pictures_items/"],
+			"Plastic" : ["blue_bin", "URLpic"],
 			"glass" : ["blue_bin", "URLpic"],
 			"metal" : ["blue_bin", "URLpic"],
 			"hangers" : ["blue_bin", "URLpic"],

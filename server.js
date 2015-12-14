@@ -13,6 +13,22 @@ var trashit = JSON.parse(all); //convert from JSON to JS obj
 var server = app.listen(3006);
 console.log('server started on port 3006...');
 
+// Our "database" (in addition to what is in the AFINN-111 list)
+// is "additional.json", check first to see if it exists
+var additional;
+var exists = fs.existsSync('additional.json');
+if (exists) {
+  // Read the file
+  console.log('loading additional words');
+  var txt = fs.readFileSync('additional.json', 'utf8');
+  // Parse it  back to object
+  additional = JSON.parse(txt);
+} else {
+  // Otherwise start with blank list
+  console.log('No additional words');
+  additional = {};
+}
+
 //serve static files from public:
 app.use(express.static('public'));
 
@@ -84,6 +100,7 @@ function imgItem(req, res){
 		//fs.trashit.countries[country][item][1]
 		//res.send( + )
 		// app.use(express.static('/public/pictures_items' + trashit.countries[country][item][1]));
+		//fs.readFileSync(trashit.countries[country][item][1], { encoding: 'base64' });
 		res.send(trashit.countries[country][item][1]);
 	}
 }
@@ -103,16 +120,27 @@ function infoBin(req, res){
 
 
 
-app.get('newthing/:thing', addNewThing);
+app.get('/add/:newItem/:bin', addNewItem);
 
-function addNewThing(req, res) {
-	// code to see what the user wants to add
+function addNewItem(req, res) {
+	console.log("addNewItem was called");
 	// you put it in the trashit variable
+	var newItem = req.params['newItem']; //the item from user to add
+	var bin = req.params['bin'];
+	
+	additional[newItem] = [bin, "URLpic"];
+
+    // Let the request know it's all set
+    var reply = {
+    status: 'success',
+    newItem: newItem,
+    bin: bin
+  }
 
 	// Write a file each time we get a new word
   	// This is kind of silly but it works
-  	var json = JSON.stringify(trashit, null, 2);
-  	fs.writeFile('trashit.json', json, 'utf8', finished);
+  	var json = JSON.stringify(additional, null, 2);
+  	fs.writeFile('additional.json', json, 'utf8', finished);
   	function finished(err) {
     	console.log('Finished writing trashit.json');
     	// Don't send anything back until everything is done
