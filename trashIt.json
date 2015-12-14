@@ -76,8 +76,8 @@
 			"phone_cable" : ["special" , "/pictures_items/phone_cable"],
 			"hair" : ["general_trash", "/pictures_items/hair"],
 			"hanger" : ["blue_bin" , "/pictures_items/hanger"],
-			"juice_bottles" : ["blue_bin" , "/pictures_items/juice_bottles"] 
-			"junk_mail" ["green_bin" , "/pictures_items/junk_mail"],
+			"juice_bottles" : ["blue_bin" , "/pictures_items/juice_bottles"],
+			"junk_mail" :["green_bin" , "/pictures_items/junk_mail"],
 			"food" : ["general_trash", "/pictures_items/food"],
 			"lightbulb" : ["special" , "/pictures_items/lightbulb"],
 			"magazines" : ["green_bin" , "/pictures_items/magazines"],
@@ -87,8 +87,8 @@
 			"packing_fill" : ["general_trash", "/pictures_items/packing_fill"],
 			"paper_towels" : ["general_trash", "/pictures_items/paper_towels"],
 			"paper_bag" : ["green_bin" , "/pictures_items/paper_bag"],
-			"plastic_bag" : ["general_trash", "/pictures_items/plastic_bag"]
-			"juice_bottle" ["blue_bin" , "/pictures_items/juice_bottle"],
+			"plastic_bag" : ["general_trash", "/pictures_items/plastic_bag"],
+			"juice_bottle" : ["blue_bin" , "/pictures_items/juice_bottle"],
 			"plastic_cup" : ["blue_bin" , "/pictures_items/plastic_cup"],
 			"price_tag" : ["green_bin" , "/pictures_items/price_tag"],
 			"q_tips" : ["general_trash", "/pictures_items/q_tips"],
@@ -115,7 +115,7 @@
 
 	"bins": {
 		"blue_bin" : {
-			"general_yes": ["Metal", "Glass", "Plastic", "bottles/jars" "rigid plastic", "cartons"],
+			"general_yes": ["Metal", "Glass", "Plastic", "bottles/jars" , "rigid plastic", "cartons"],
 			"general_no" : ["no batteries", "no plastic bags", "no squeeze tubes", "no plastic foams", "no styrofoam"], 
 			"color" : "blue",
 			"color_bag": "transparent",
@@ -133,7 +133,7 @@
 			"opening_shape" : "linear",
 			"picture" : "URLPicGreen",
 			"where_does_it_go" : ["URLVidPaper"],
-			"interesting_facts" : ["did you know You CAN recycle staples in the paper bin?", "did you know that during the recycling process, paper is dissolved in water, that's why paper permeated with plastic or wax can’t be recycled.", "Did you know that Soiled paper adds impurities to the recycled product?"],
+			"interesting_facts" : ["did you know You CAN recycle staples in the paper bin?", "did you know that during the recycling process, paper is dissolved in water, that's why paper permeated with plastic or wax can’t be recycled.", "Did you know that Soiled paper adds impurities to the recycled product?"]
 		},
 
 		"mixed_recycle": {

@@ -1,13 +1,17 @@
+ 
 
 
 
-var item = select('#item');
-var button = select('#submit');
-button.mousePressed(checkThing);
+var button = document.getElementById('submit');
 
-function checkThing() {
-	var url = 'countries/' + item.value();
-	loadJSON(url, gotData);
+
+function throwSearch() {
+	var item = select('item');
+	item = item.value;
+	console.log("a search was requested " + item);
+	var url = 'countries/USA/' + item;
+
+	//loadJSON(url, gotData);
 }
 
 function gotData(){

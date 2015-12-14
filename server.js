@@ -21,7 +21,7 @@ app.use(express.static('public'));
 ///////////////////////////////////////////////////
 
 
-/////a route that returns JSON by any county input
+/////a route that returns list of items for county input
 app.get('/countries/:country', showCountry);
 
 function showCountry(req, res) {
@@ -42,7 +42,7 @@ function showAll(req, res) {
 	res.send(trashit); //send the whaole obj
 }
 
-////route with country and
+////route with country and item returns list related to item (bin + pic)
 app.get('/countries/:country/:item', whereToThrow);
 
 function whereToThrow(req, res){
@@ -55,9 +55,38 @@ function whereToThrow(req, res){
 	} else if(trashit.countries[country][item] == undefined){ 
 		res.send("Can't find item - click to add it now!");
 	} else {
-		res.send(trashit.countries[country][item]);
+		res.send(trashit.countries[country][item][0]);
 	}
 }
+
+////route with country and item returns img of item
+app.get('/countries/:country/:item/img', imgItem);
+
+
+function imgItem(req, res){
+	console.log("imgItem was called");
+	var country = req.params['country'];
+	var item = req.params['item'];
+		console.log(item);
+	var img = req.params['img'];
+
+	if (trashit.countries[country] == undefined){
+		res.send("The country you've asked is not in our DataBase");
+	} else if(trashit.countries[country][item] == undefined){
+		res.send("Can't find item - click to add it now!");
+	} else if(trashit.countries[country][item][1] == undefined){
+		res.send("Sorry - this item doesn't have an image yet!");
+	} else {
+		
+		console.log("img is found");
+		//fs.trashit.countries[country][item][1]
+		//res.send()
+		//app.use(express.static('/public/pictures_items' + trashit.countries[country][item][1]));
+		
+		//res.send(trashit.countries[country][item][1]);
+	}
+}
+
 
 ////route to show bin info
 app.get('/bins/:bin', infoBin);

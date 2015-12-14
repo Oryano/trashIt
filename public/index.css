@@ -1,0 +1,23 @@
+
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    height:100%;
+    padding:0px;
+    width:100%;
+    background-color: #F5F5F5;
+}
+
+h3{
+	display: inline-block;
+}
+
+#item{
+	display: inline-block;
+
+}
