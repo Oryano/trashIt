@@ -70,6 +70,7 @@ function imgItem(req, res){
 		console.log(item);
 	var img = req.params['img'];
 
+
 	if (trashit.countries[country] == undefined){
 		res.send("The country you've asked is not in our DataBase");
 	} else if(trashit.countries[country][item] == undefined){
@@ -78,12 +79,12 @@ function imgItem(req, res){
 		res.send("Sorry - this item doesn't have an image yet!");
 	} else {
 		
+
 		console.log("img is found");
 		//fs.trashit.countries[country][item][1]
-		//res.send()
-		//app.use(express.static('/public/pictures_items' + trashit.countries[country][item][1]));
-		
-		//res.send(trashit.countries[country][item][1]);
+		//res.send( + )
+		// app.use(express.static('/public/pictures_items' + trashit.countries[country][item][1]));
+		res.send(trashit.countries[country][item][1]);
 	}
 }
 
